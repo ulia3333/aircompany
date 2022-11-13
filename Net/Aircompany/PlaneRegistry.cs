@@ -2,15 +2,13 @@
 using Aircompany.Planes;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aircompany
 {
-    class Runner
+    public static class PlaneRegistry
     {
-        public static List<Plane> _planes = new List<Plane>() {
+        public static List<Plane> Planes = new List<Plane>()
+        {
             new PassengerPlane("Boeing-737", 900, 12000, 60500, 164),
             new PassengerPlane("Boeing-737-800", 940, 12300, 63870, 192),
             new PassengerPlane("Boeing-747", 980, 16100, 70500, 242),
@@ -26,10 +24,5 @@ namespace Aircompany
             new MilitaryPlane("F-22", 1550, 13000, 11000, MilitaryType.Fighter),
             new MilitaryPlane("C-130 Hercules", 650, 5000, 110000, MilitaryType.Transport)
         };
-
-        public List<Plane> GetPlanes()
-        {
-            return _planes;
-        }
-    }
+   }
 }
